@@ -15,6 +15,7 @@ public class WriterThread extends Thread {
             while (true) {
                 char c = nextchar();
                 data.write(c);
+                System.out.println(Thread.currentThread().getName() + " writes " + String.valueOf(c));
                 Thread.sleep(random.nextInt(3000));
             }
         } catch (InterruptedException e) {
