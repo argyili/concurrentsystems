@@ -4,7 +4,7 @@ public final class RWLock3 implements ReadWriteLock {
 	private int readingReaders = 0; 
 	private int writingWriters = 0; 
 	private int waitingWriters = 0;
-
+	
 	public synchronized void acquireRead() throws InterruptedException {
 		while (writingWriters > 0 || waitingWriters > 0) {
 			wait();
