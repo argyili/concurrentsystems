@@ -11,7 +11,7 @@ public class AMSDump extends Agent {
 		AMSAgentDescription[] agents = null;
 		try {
 			SearchConstraints c = new SearchConstraints();
-			c.setMaxResults(new Long(-1)); // -1: ALL
+			// c.setMaxResults(new Long(-1)); // -1: ALL
 			c.setMaxResults(Long.valueOf(-1));
 			agents = AMSService.search(this, new AMSAgentDescription(), c);
 		} catch (Exception e) {
